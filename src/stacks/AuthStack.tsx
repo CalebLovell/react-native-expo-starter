@@ -1,11 +1,11 @@
 import React from 'react';
-import { SignupScreen } from './screens/SignupScreen';
-import { LoginScreen } from './screens/LoginScreen';
+import { SignupScreen } from '../screens/SignupScreen';
+import { LoginScreen } from '../screens/LoginScreen';
 
 import { createStackNavigator } from '@react-navigation/stack';
 const Stack = createStackNavigator();
 
-export const AuthStack = () => {
+export const AuthStack: React.FC = () => {
 	return (
 		<Stack.Navigator
 			screenOptions={{

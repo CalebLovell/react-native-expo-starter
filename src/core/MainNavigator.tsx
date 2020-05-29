@@ -26,7 +26,7 @@ export const MainNavigator = () => {
 				name='Profile'
 				component={ProfileStack}
 				options={{
-					tabBarLabel: 'Profile',
+					tabBarLabel: `Profile`,
 					tabBarIcon: ({ color }) => <Octicons name='person' size={28} color={color} />,
 				}}
 			/>
@@ -34,7 +34,7 @@ export const MainNavigator = () => {
 				name='Circles'
 				component={CirclesStack}
 				options={{
-					tabBarLabel: 'Circles',
+					tabBarLabel: `Circles`,
 					tabBarIcon: ({ color }) => <MaterialCommunityIcons name='google-circles-extended' size={28} color={color} />,
 				}}
 			/>
@@ -42,7 +42,7 @@ export const MainNavigator = () => {
 				name='Connections'
 				component={ConnectionsStack}
 				options={{
-					tabBarLabel: 'Connections',
+					tabBarLabel: `Connections`,
 					tabBarIcon: ({ color }) => <Ionicons name='ios-people' size={34} color={color} />,
 				}}
 			/>
@@ -50,10 +50,10 @@ export const MainNavigator = () => {
 				name='Calendar'
 				component={CalendarStack}
 				options={{
-					tabBarLabel: 'Calendar',
+					tabBarLabel: `Calendar`,
 					tabBarIcon: ({ color }) => <Octicons name='calendar' size={26} color={color} />,
 				}}
 			/>
 		</BottomTabs.Navigator>
 	);
-}
+};

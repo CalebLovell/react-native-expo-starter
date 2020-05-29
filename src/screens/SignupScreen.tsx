@@ -3,7 +3,7 @@ import { StyleSheet, Text, TextInput, View, TouchableOpacity } from 'react-nativ
 import { AuthDispatchContext } from '../../../providers/AuthProvider';
 import { DeviceContext } from '../../../providers/DeviceProvider';
 
-export const SignupScreen = ({ navigation }) => {
+export const SignupScreen: React.FC = ({ navigation }) => {
 	const [name, setName] = useState(``);
 	const [email, setEmail] = useState(``);
 	const [password, setPassword] = useState(``);
@@ -18,7 +18,7 @@ export const SignupScreen = ({ navigation }) => {
 			email,
 			password,
 		};
-		dispatchAuth({ type: 'SIGN_UP', payload: newUser });
+		dispatchAuth({ type: `SIGN_UP`, payload: newUser });
 	};
 
 	return (
@@ -44,13 +44,13 @@ export const SignupScreen = ({ navigation }) => {
 const styles = StyleSheet.create({
 	screen: {
 		flex: 1,
-		justifyContent: 'space-between',
-		alignItems: 'center',
+		justifyContent: `space-between`,
+		alignItems: `center`,
 	},
 	form: {
-		width: '80%',
-		justifyContent: 'center',
-		alignItems: 'center',
+		width: `80%`,
+		justifyContent: `center`,
+		alignItems: `center`,
 	},
 	title: {
 		fontSize: 34,
@@ -61,17 +61,17 @@ const styles = StyleSheet.create({
 	},
 	input: {
 		height: 40,
-		width: '100%',
+		width: `100%`,
 		marginBottom: 10,
-		borderColor: 'gray',
+		borderColor: `gray`,
 		borderWidth: 1,
 	},
 	button: {
 		height: 40,
 		width: 100,
 		borderRadius: 20,
-		justifyContent: 'center',
-		alignItems: 'center',
-		alignSelf: 'flex-end',
+		justifyContent: `center`,
+		alignItems: `center`,
+		alignSelf: `flex-end`,
 	},
 });

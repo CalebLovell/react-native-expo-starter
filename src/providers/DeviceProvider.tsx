@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { ColorScheme } from '../utility/ColorScheme';
+import { ColorScheme } from '../config/ColorScheme';
 
 export const DeviceContext = React.createContext();
 export const DeviceDispatchContext = React.createContext();

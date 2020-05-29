@@ -1,13 +1,31 @@
 import React, { useReducer } from 'react';
 import { AsyncStorage } from 'react-native';
-import { getUser, createUser } from '../utility/API';
+import { getUser, createUser } from '../services/API';
 
-export const AuthContext = React.createContext();
-export const AuthDispatchContext = React.createContext();
+export const AuthContext = React.createContext(null);
+export const AuthDispatchContext = React.createContext(null);
 
-const initialState = null;
+export interface User {
+	first_name: string;
+	last_name: string;
+	email: string;
+	password: string;
+}
 
-const reducer = (state, action) => {
+enum AuthTypes {
+	SIGN_UP = `SIGN_UP`,
+	LOG_IN = `LOG_IN`,
+	LOG_OUT = `LOG_OUT`,
+}
+
+interface Action {
+	type: AuthTypes;
+	payload: User;
+}
+
+const initialState = { first_name: ``, last_name: ``, email: ``, password: `` };
+
+const reducer = (state: User, action: Action) => {
 	switch (action.type) {
 		case `SIGN_UP`: {
 			const newUser = createUser(action.payload);
@@ -21,7 +39,6 @@ const reducer = (state, action) => {
 		}
 		case `LOG_OUT`: {
 			AsyncStorage.removeItem(`user`);
-			return (state = initialState);
 		}
 		default:
 			throw new Error(`Bad Action Type`);

@@ -32,7 +32,6 @@ module.exports = {
 		'max-statements-per-line': [`error`, { max: 1 }],
 		'no-empty-function': `error`,
 		'no-floating-decimal': `error`,
-		'no-inline-comments': `error`,
 		'no-multi-spaces': `error`,
 		'no-multiple-empty-lines': [`error`, { max: 2, maxEOF: 0, maxBOF: 0 }],
 		'no-new-object': `error`,

@@ -17,7 +17,7 @@ export const LoginScreen = ({ navigation }) => {
 			email,
 			password,
 		};
-		dispatchAuth({ type: 'LOG_IN', payload: existingUser });
+		dispatchAuth({ type: `LOG_IN`, payload: existingUser });
 	};
 
 	return (
@@ -42,13 +42,13 @@ export const LoginScreen = ({ navigation }) => {
 const styles = StyleSheet.create({
 	screen: {
 		flex: 1,
-		justifyContent: 'space-between',
-		alignItems: 'center',
+		justifyContent: `space-between`,
+		alignItems: `center`,
 	},
 	form: {
-		width: '80%',
-		justifyContent: 'center',
-		alignItems: 'center',
+		width: `80%`,
+		justifyContent: `center`,
+		alignItems: `center`,
 	},
 	title: {
 		fontSize: 34,
@@ -59,17 +59,17 @@ const styles = StyleSheet.create({
 	},
 	input: {
 		height: 40,
-		width: '100%',
+		width: `100%`,
 		marginBottom: 10,
-		borderColor: 'gray',
+		borderColor: `gray`,
 		borderWidth: 1,
 	},
 	button: {
 		height: 40,
 		width: 100,
 		borderRadius: 20,
-		justifyContent: 'center',
-		alignItems: 'center',
-		alignSelf: 'flex-end',
+		justifyContent: `center`,
+		alignItems: `center`,
+		alignSelf: `flex-end`,
 	},
 });
